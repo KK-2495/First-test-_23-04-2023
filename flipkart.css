@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.screen{
+    /* height: 2000px; */
+    background-color: #f1f3f6;
+}
+.navBar {
+    width: 100%;
+    background-color: #2874f0;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.innerNavBar{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+}
+.innerNavBar >div {
+    border: 2px solid black;
+    /* padding: 5px; */
+}
+.flipkartlogo{
+    width: 9%;
+    text-align: center;
+
+}
+.fKartlogo img {
+    width: 100%;  
+}
+.fKartPlus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10%;
+}
+.fKartPlus p{
+    font-size: 11px;
+    color: white;
+}
+.fKartPlus p>i:nth-child(2){
+    color: yellow;
+    font-weight: bold;
+}
+.fKartPlus img {
+    width: 17%;
+    height: 17%;
+}
+.searchBar{
+    display: flex;
+    background-color: white;
+    padding: 0px 5px;
+    width: 35%;
+    justify-content: space-between;
+}
+.searchBar input {
+    outline: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.content{
+    background-color: white;
+    height: 1500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********Footer***** */
+.footer{
+    background-color: #172337;
+    height: 300px;
+}
