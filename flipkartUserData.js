@@ -29,6 +29,7 @@ function register(event){
                     document.getElementById("userConfirmPassword").value ="";
                 }else{
                     alert("You're already registered.");
+                    window.location.href = `./flipkartLogin.html`
                 }
 
             }else{
@@ -43,45 +44,6 @@ function register(event){
 
 
 }
-
-
-// function register(event){
-//     event.preventDefault();
-
-//     // alert("Function Called");
-
-//     var f_name = document.getElementById("userName").value;
-//     var f_email = document.getElementById("userEmail").value;
-//     var f_password = document.getElementById("userPassword").value;
-//     var f_confirmPassword = document.getElementById("userConfirmPassword").value;
-
-//     if(f_name && f_email && f_password && f_confirmPassword){
-//         if(f_password.length >= 8 && f_confirmPassword >= 8){
-//             if(f_password == f_confirmPassword){
-//                 var flipkart_storage = JSON.parse(localStorage.getItem("flipkart_user")) || [];
-//                 var flag = false;
-
-//                 for(i=0;i<flipkart_storage.length;i++){
-//                     if(flipkart_storage[i].userEmail == f_email){
-//                         flag=true;
-//                     }
-//                 }
-
-//                 if(!flag){
-//                     var flipkart_object = {userName: f_name, userEmail: f_email, userPassword: f_password, userConfirmPassword: f_confirmPassword};
-//                     flipkart_storage.push(flipkart_object);
-//                     localStorage.setItem("flipkart_user", JSON.stringify(flipkart_storage));
-//                 } else {
-//                     alert("Email already exists. Proceed to login");
-//                 }
-//             }
-//         } else {
-//             alert("length should be greater than 8");
-//         }
-//     } else {
-//         alert("All fields are mandatory");
-//     }
-// }
 
 
 
@@ -102,13 +64,16 @@ function login(event){
     var currentUser;
     
     for(var i=0; i<activeUser.length; i++){
-        if(activeUser[i].uEmail == email){
+        if(activeUser[i].uEmail == email && activeUser[i].uPassword == password){
             flagForEmail = true;
-            
+            currentUser = activeUser[i];
         }
     }if(flagForEmail){
-        localStorage.setItem("fKartcurrentUser", JSON.stringify())
+        localStorage.setItem("fKartcurrentUser", JSON.stringify(currentUser));
+        window.location.href = `./flipkartHome.html`;
+        console.log("You're Logged in now..");
     }else{
         alert("Register to Login");
+        window.location.href = `./Flipkart_Register.html`;
     }
 }
